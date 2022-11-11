@@ -28,10 +28,10 @@ class CatTest {
     }
 
     @Test
-    void catlickBallsShouldReturnString() {
+    void catLickBallsShouldReturnString() {
 
         Cat cat = new Cat("Persian", "black", 3);
-        assertEquals(cat.tigidik(), "Tigidik-tigidik");
+        assertEquals(cat.lickBalls(), "Hm...");
     }
 
     @ParameterizedTest(name = "{index} => dayOfWeek=''{0}''")
@@ -70,6 +70,18 @@ class CatTest {
         Exception exception = assertThrows(NullPointerException.class, () ->
                 cat.occupation(dayOfWeek));
         assertEquals("Cannot invoke \"DaysOfWeek.ordinal()\" because \"daysOfWeek\" is null", exception.getMessage());
+
+    }
+
+    @Test
+    void compareCatsTest() {
+
+        Cat cat = new Cat("Persian", "black", 3);
+        Cat equalCat = new Cat("Persian", "black", 3);
+        Cat notEqualCat = new Cat("Persian", "brown", 3);
+        assertEquals(cat, equalCat);
+        assertNotEquals(cat, notEqualCat);
+
 
     }
 
