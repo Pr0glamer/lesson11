@@ -73,5 +73,13 @@ class CatTest {
 
     }
 
+    @Test
+    void compareCatsTest() {
+
+        Cat cat = new Cat("Persian", "black", 3);
+        Cat equalCat = new Cat("Persian", "black", 3);
+        assertEquals(cat, equalCat);
+    }
+
 
 }
