@@ -51,9 +51,5 @@ public class Cat extends Predator{
         return occupation;
     }
 
-    public static void main(String[] args) {
-        Cat cat = new Cat("Persian", "white", 4);
-        System.out.println(cat.occupation(DaysOfWeek.THU));
-    }
 
 }
