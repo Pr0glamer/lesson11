@@ -28,10 +28,10 @@ class CatTest {
     }
 
     @Test
-    void catlickBallsShouldReturnString() {
+    void catLickBallsShouldReturnString() {
 
         Cat cat = new Cat("Persian", "black", 3);
-        assertEquals(cat.tigidik(), "Tigidik-tigidik");
+        assertEquals(cat.lickBalls(), "Hm...");
     }
 
     @ParameterizedTest(name = "{index} => dayOfWeek=''{0}''")
@@ -78,7 +78,11 @@ class CatTest {
 
         Cat cat = new Cat("Persian", "black", 3);
         Cat equalCat = new Cat("Persian", "black", 3);
+        Cat notEqualCat = new Cat("Persian", "brown", 3);
         assertEquals(cat, equalCat);
+        assertNotEquals(cat, notEqualCat);
+
+
     }
 
 
